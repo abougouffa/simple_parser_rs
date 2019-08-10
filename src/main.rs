@@ -1,4 +1,3 @@
-extern crate console;
 extern crate simple_parser_rs;
 use console::style;
 use console::Term;
