@@ -22,7 +22,7 @@ Type a math expression or type 'quit' to exit\n"
 
         if let Ok(expr) = stdout.read_line() {
             let expr = expr.trim_end();
-            if expr == "quit" {
+            if expr == "quit" || expr == "exit" {
                 break;
             } else if let Ok(result) = Parser::parse(expr) {
                 stdout
@@ -32,4 +32,6 @@ Type a math expression or type 'quit' to exit\n"
         }
         expr.clear();
     }
+
+    println!("{}", style("-> Goodbye!").dim());
 }
